@@ -319,10 +319,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3067bcd3555714d4bbea1397525b15c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boid: {fileID: 3318344574099125351, guid: 4fa73810fd05b3d4c81778c07c24a372, type: 3}
+  boids: []
+  boid: {fileID: 3318344574099125351, guid: 8caa631fcbcd0f441bf536db4e2ab4e9, type: 3}
   spread: 100
   canvas: {fileID: 1258520276}
-  startCount: 5
+  startCount: 40
 --- !u!4 &975260987
 Transform:
   m_ObjectHideFlags: 0
