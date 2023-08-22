@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boid : MonoBehaviour
 {
+    public Slider avoidSlider, matchingSlider, centeringSlider;
     public List<Boid> PRBoids = new List<Boid>();
     public List<Boid> VRBoids = new List<Boid>();
     public Mother mom;
@@ -27,6 +29,10 @@ public class Boid : MonoBehaviour
     }
     private void Update()
     {
+        avoidFactor = avoidSlider.value;
+        matchingFactor = matchingSlider.value;
+        centeringFactor = centeringSlider.value;
+
         Edge();
 
         if (Mathf.Abs(xV) + Mathf.Abs(yV) < minV)

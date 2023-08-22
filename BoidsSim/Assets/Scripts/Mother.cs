@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mother : MonoBehaviour
 {
+    public Slider avoidSlider, matchingSlider, centeringSlider;
     public List<Boid> boids = new List<Boid>();
     public Boid boid;
     public float spread;
@@ -22,6 +24,9 @@ public class Mother : MonoBehaviour
             newBoid.transform.localPosition = basePos + new Vector2(Random.Range(-spread, spread), Random.Range(-spread, spread));
             newBoid.transform.eulerAngles += Vector3.forward * Random.Range(-180f, 180f);
             newBoid.mom = this;
+            newBoid.avoidSlider = avoidSlider;
+            newBoid.matchingSlider = matchingSlider;
+            newBoid.centeringSlider = centeringSlider;
             boids.Add(newBoid);
         }
     }
